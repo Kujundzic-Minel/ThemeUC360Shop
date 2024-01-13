@@ -1,0 +1,562 @@
+/*
+Theme Name: Mon Joli Theme
+Theme URI: https://monurlpersonnel.com/mesthemes
+Author: Prenom Minel
+Author URI: https://monurlpersonnel.com
+Description: Le thème développer pour Unified Champions
+Version: 0.1
+Tags: simple, facile, sans danger, base pour la suite
+*/
+
+
+/* =============================
+Styles généraux
+==============================*/
+
+body {
+    background-color: #101010; /* Couleur de fond */
+    margin: 0; /* Marge */
+    padding: 0; /* Padding */
+}
+
+/* Styles des titres h1 et h2 */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+    text-transform: uppercase; /* Transformation du texte en majuscules */
+    margin: 100px 20%; /* Marges */
+    font-size: 30px; /* Taille de la police */
+    line-height: 100%; /* Hauteur de ligne */
+}
+
+/* Styles pour les titres h6 */
+h6 {
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte en blanc */
+    font-weight: 600; /* Poids de la police à semibold. Montserrat semibold est généralement 600 */
+    font-size: 36px; /* Taille de la police à 36px */
+    margin-bottom: 3vh; /* Marge supérieure */
+    margin-left: 6vh; /* Marge gauche */
+}
+
+
+/* Styles des paragraphes */
+p {
+    color: white; /* Couleur du texte */
+    font-family: Josefin Sans; /* Police de caractère */
+}
+
+/* Styles des liens */
+a { 
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    text-decoration: none; /* Suppression du soulignement */
+    color: white; /* Couleur du texte */
+}
+
+/* Styles des listes */
+li {
+    list-style-type: none !important; /* Suppression des puces de liste */
+}
+
+/* =============================
+Styles effets neon
+==============================*/
+.product-line_purple, .product-line_purple2 {
+    border: 5px solid #A533FF;
+    border-radius: 25px;
+    color: #A533FF;
+    overflow: visible;
+    text-align: center;
+    box-shadow: 0px 0px 2px 0px #A533FF inset;
+    filter: drop-shadow(0px 0px 10px #A533FF);
+}
+
+.product-line_purple {
+    float: left; /* Aligner à gauche */
+    width: 60%; /* Prend 60% de la largeur de l'écran */
+}
+
+.product-line_purple2 {
+    float: right; /* Aligner à droite */
+    width: 50%; /* Prend 40% de la largeur de l'écran */
+    margin-top: 4vh; /* Conserver la marge supérieure */
+}
+
+/* =============================
+Styles Header
+==============================*/
+/* Styles du header fixe */
+.header-fixed {
+    display: flex; /* Affichage en flex */
+    justify-content: space-between; /* Justification de contenu */
+    align-items: center; /* Alignement des éléments */
+    background: linear-gradient(to bottom, #201D4C, #101010); /* Dégradé du violet au noir */
+    padding: 10px; /* Padding */
+}
+
+/* Styles du menu dans l'en-tête */
+.menu-header {
+    display: flex; /* Affichage en flex */
+    justify-content: center; /* Justification de contenu */
+    width: 100%; /* Largeur */
+}
+
+.menu-header ul {
+    margin: 0; /* Marge */
+    padding: 0; /* Padding */
+    display: flex; /* Affichage en flex */
+}
+
+.menu-header li {
+    margin: 0 10px; /* Marges */
+}
+
+.menu-header li:hover {
+    filter: drop-shadow(2px 2px 5px #7209B7); /* Effet d'ombre */
+}
+
+.menu-header a {
+    color: white; /* Couleur du texte */
+    font-size: 20px; /* Taille de la police */
+    font-weight: bold; /* Mise en gras du texte */
+}
+
+/* =============================
+Style des produits
+==============================*/
+/* Centrage des produits dans la page avec plus d'espace entre eux */
+.woocommerce ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    text-align: left; /* Alignement à gauche */
+    color: white; /* Couleur du texte en blanc */
+}
+
+.woocommerce ul.products li.product img {
+    width: 20rem !important; /* Largeur fixée à 100px */
+    height: 20rem !important; /* Hauteur fixée à 300px */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'espace */
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+
+.woocommerce ul.products li.product a.button {
+    transition: transform 0.3s, background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.woocommerce ul.products li.product a.button:hover {
+    transform: scale(1.1); /* Rend le bouton légèrement plus grand */
+    background-color: violet; /* Change la couleur en violet */
+}
+
+/* =============================
+Style page single_product
+==============================*/
+/* Styliser le titre du produit */
+.product_title {
+    color: #333; /* Couleur du texte */
+    font-size: 28px; /* Taille de la police */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+/* Styliser le prix du produit */
+.single-product .woocommerce-Price-amount {
+    color: #940BFF; /* Couleur du texte du prix */
+    font-size: 24px; /* Taille de la police du prix */
+    font-weight: bold; /* Police en gras */
+}
+
+/* Styliser la description du produit */
+.entry-summary p {
+    color: #555; /* Couleur du texte de la description */
+    font-size: 16px; /* Taille de la police de la description */
+    line-height: 1.6; /* Hauteur de ligne */
+}
+
+/* Styliser le bouton "Ajouter au panier" */
+.single_add_to_cart_button {
+    background-color: #940BFF; /* Couleur d'arrière-plan du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Remplissage du bouton */
+    border: none; /* Pas de bordure pour le bouton */
+    border-radius: 4px; /* Bords arrondis du bouton */
+    font-size: 16px; /* Taille de la police du bouton */
+    cursor: pointer; /* Style du curseur */
+}
+
+.single_add_to_cart_button:hover {
+    background-color: #0052a3; /* Couleur d'arrière-plan au survol */
+}
+
+/* Styliser le conteneur de la page du produit */
+#product-<?php the_ID(); ?> {
+    padding: 20px; /* Remplissage autour du produit */
+    border: 1px solid #ddd; /* Bordure autour du produit */
+    border-radius: 8px; /* Bords arrondis du conteneur */
+    max-width: 800px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrer le conteneur */
+}
+
+/* Réduire la taille de l'image du produit */
+.woocommerce-product-gallery__image img {
+    max-width: 250px; /* Définir une largeur maximale pour l'image */
+    height: auto; /* Garder le rapport hauteur/largeur */
+    display: block; /* Afficher en bloc pour centrer */
+    margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+/* Cibler les balises <p> uniquement dans la page de produit single-product */
+.single-product p {
+    width: 33%; /* Largeur fixée à environ un tiers de l'écran */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+}
+
+/* Style pour modifier la "catégorie" uniquement dans la page de produit single-product */
+.posted_in {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: purple;
+}
+
+/* =============================
+Style page Mon-Panier
+==============================*/
+.cart {
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 20px; /* Remplissage autour du produit */
+}
+.product_title, .entry-title {
+    font-size: 24px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style général du panier */
+.woocommerce-cart-form {
+    color: #fff; /* Couleur du texte */
+    border: 1px solid #fff; /* Bordure blanche */
+    border-radius: 10px; /* Bords arrondis */
+    height: 30%; /* Largeur */
+    width: 100%; /* Hauteur */
+}
+
+/* Style du texte code promo */
+.input-text {
+    color: #fff; /* Couleur du texte */
+    font-size: 14px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    background: none; /* Pas de couleur de fond */
+    border: 2px solid white; /* Bordure solide blanche */
+    border-radius: 10px; /* Bords arrondis */
+    width: 100%; /* Largeur à 100% du conteneur parent */
+    min-width: 4rem; /* Largeur minimale basée sur une taille de police de base de 16px */
+    padding: 0.5rem; /* Remplissage */
+    margin: 0.5rem 0; /* Marge */
+}
+
+/* Style du prix des produits */
+.woocommerce-Price-amount {
+    color: white; /* Couleur du texte du prix */
+    font-size: 24px; /* Taille de la police du prix */
+    font-weight: bold; /* Police en gras */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+}
+
+/* Style des "total" */
+.cart-subtotal {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style du nom de produit dans le panier */
+.product-name {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style du prix de produit dans le panier */
+.product-price {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style de la quantité de produit dans le panier */
+.product-quantity {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style du total de produit dans le panier */
+.product-subtotal {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style de la bannière panier vide*/
+.wc-block-components-notice-banner {
+    border: 1px solid #fff; /* Bordure blanche */
+    border-radius: 10px; /* Bords arrondis */
+    width: 22%; /* Hauteur */
+    font-size: 14px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+    justify-content: center; /* Justification de contenu */
+    align-items: center; /* Alignement des éléments */
+    margin: 0 auto; /* Centrer le conteneur */
+}
+
+/* Style du contenu de la bannière panier vide*/
+.wc-block-components-notice-banner__content {
+    justify-content: center !important; /* Justification de contenu */
+    align-items: center !important; /* Alignement des éléments */
+    margin: 0 auto !important; /* Centrer le conteneur */
+}
+
+.flex-control-nav {
+    justify-content: space-between; /* Justification de contenu */
+    align-items: center; /* Alignement des éléments */
+    padding-top: 2vh; /* Marge supérieure */
+}
+
+/* Style des images de previsualisation des produits dans le panier */
+.flex-active, .flex-control-thumbs li img {
+    border-radius: 10px; /* Bords arrondis */
+    justify-content: space-between; /* Justification de contenu */
+    align-items: center; /* Alignement des éléments */
+}
+
+/* Style des tailles selectionné pour notre article */
+.product-name p {
+    color: #fff; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    background: none; /* Pas de couleur de fond */
+    width: 100%; /* Largeur à 100% du conteneur parent */
+}
+
+.order-total {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+    margin-top: 2vh; /* Marge supérieure */
+}
+
+/* =============================
+Style page page-checkout
+==============================*/
+
+/* Style du titre de la page */
+.woocommerce-billing-fields h3 {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white; /* Couleur du texte */
+}
+
+/* Style des champs de la page */
+.form-row, .form-row-first, .validate-required {
+    font-size: 14px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+}
+
+.attachment-thumbnail, .size-thumbnail {
+    border-radius: 15px; /* Bordures arrondies */
+    border: 2px solid purple; /* Contour blanc */
+    box-shadow: 0 0 20px purple; /* Ombre violette */
+    float: right; /* Positionnement à droite */
+    margin-left: 20px; /* Marge à gauche pour ne pas coller aux éléments à gauche */
+    width: 15rem !important; /* Largeur fixée à 100px */
+    height: 20rem !important; /* Hauteur fixée à 300px */
+}
+
+/* =============================
+Style page Mon-Compte
+==============================*/
+
+.woocommerce-MyAccount-navigation ul {
+    display: flex; /* Utiliser flex pour le conteneur de navigation */
+    justify-content: space-between; /* Espacer uniformément les éléments */
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 30px; /* Padding */
+}
+
+.woocommerce-MyAccount-content p {
+    font-size: 18px; /* Taille de la police */
+    color: purple; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 30px; /* Padding */    
+}
+
+.u-columns, .woocommerce-Addresses, .col2-set h3 {
+    font-size: 18px; /* Taille de la police */
+    color: white; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 30px; /* Padding */    
+}
+
+.woocommerce-Address-title, .title a {
+    font-size: 18px; /* Taille de la police */
+    color: white; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    margin: 0 auto; /* Centrer le conteneur */
+}
+
+.addresses {
+    font-size: 16px; /* Taille de la police */
+    color: purple; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+}
+
+legend {
+    font-size: 18px; /* Taille de la police */
+    color: white; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+}
+
+.woocommerce-form, .woocommerce-form-register, .register {
+    color: white; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    width: 85%; /* Largeur à 100% du conteneur parent */
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+/* =============================
+FORMAT TELEPHONE
+==============================*/
+/* Media Queries pour les écrans de téléphone (jusqu'à 600px) */
+@media (max-width: 600px) {
+/* =============================
+Styles effets neon
+==============================*/
+.product-line_purple, .product-line_purple2 {
+    border: 5px solid #A533FF;
+    border-radius: 25px;
+    color: #A533FF;
+    overflow: visible;
+    text-align: center;
+    box-shadow: 0px 0px 2px 0px #A533FF inset;
+    filter: drop-shadow(0px 0px 10px #A533FF);
+}
+
+.product-line_purple {
+    float: left; /* Aligner à gauche */
+    width: 60%; /* Prend 60% de la largeur de l'écran */
+}
+
+.product-line_purple2 {
+    float: right; /* Aligner à droite */
+    width: 50%; /* Prend 40% de la largeur de l'écran */
+    margin-top: 2vh; /* Conserver la marge supérieure */
+}
+
+
+
+
+/* =============================
+Styles Header
+==============================*/
+/* Styles du header fixe */
+.header-fixed {
+    display: flex; /* Affichage en flex */
+    justify-content: space-between; /* Justification de contenu */
+    align-items: center; /* Alignement des éléments */
+    background: linear-gradient(to bottom, #201D4C, #101010); /* Dégradé du violet au noir */
+    padding: 10px; /* Padding */
+}
+
+/* Styles du menu dans l'en-tête */
+.menu-header {
+    display: flex; /* Affichage en flex */
+    justify-content: center; /* Justification de contenu */
+    width: 100%; /* Largeur */
+}
+
+.menu-header ul {
+    margin: 0; /* Marge */
+    padding: 0; /* Padding */
+    display: flex; /* Affichage en flex */
+}
+
+.menu-header li {
+    margin: 0 10px; /* Marges */
+}
+
+.menu-header li:hover {
+    filter: drop-shadow(2px 2px 5px #7209B7); /* Effet d'ombre */
+}
+
+.menu-header a {
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police */
+    font-weight: bold; /* Mise en gras du texte */
+}
+
+
+/* =============================
+Style des produits
+==============================*/
+/* Centrage des produits dans la page avec plus d'espace entre eux */
+.woocommerce ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    text-align: left; /* Alignement à gauche */
+    color: white; /* Couleur du texte en blanc */
+}
+
+.woocommerce ul.products li.product img {
+    width: 10rem !important; /* Largeur fixée à 100px */
+    height: 15rem !important; /* Hauteur fixée à 300px */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'espace */
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+
+.woocommerce ul.products li.product a.button {
+    transition: transform 0.3s, background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.woocommerce ul.products li.product a.button:hover {
+    transform: scale(1.1); /* Rend le bouton légèrement plus grand */
+    background-color: violet; /* Change la couleur en violet */
+}
+
+}
