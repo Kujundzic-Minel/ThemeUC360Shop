@@ -35,7 +35,6 @@
     }
     
     .logo-footer:hover, .logo-rs:hover, .menu-footer a:hover {
-        transform: scale(1.1); /* Effet de grossissement */
         filter: drop-shadow(2px 2px 5px #7209B7); /* Effet d'ombre violette */
     }
     

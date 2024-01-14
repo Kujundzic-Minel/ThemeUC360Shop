@@ -92,7 +92,7 @@ Styles Header
     justify-content: space-between; /* Justification de contenu */
     align-items: center; /* Alignement des éléments */
     background: linear-gradient(to bottom, #201D4C, #101010); /* Dégradé du violet au noir */
-    padding: 10px; /* Padding */
+    padding: 20px; /* Padding */
 }
 
 /* Styles du menu dans l'en-tête */
@@ -158,6 +158,7 @@ Style des produits
 .woocommerce ul.products li.product a.button:hover {
     transform: scale(1.1); /* Rend le bouton légèrement plus grand */
     background-color: violet; /* Change la couleur en violet */
+    filter: drop-shadow(2px 2px 5px #7209B7); /* Effet d'ombre */
 }
 
 /* =============================
@@ -196,7 +197,8 @@ Style page single_product
 }
 
 .single_add_to_cart_button:hover {
-    background-color: #0052a3; /* Couleur d'arrière-plan au survol */
+    background-color: violet; /* Change la couleur en violet */
+    filter: drop-shadow(2px 2px 5px #7209B7); /* Effet d'ombre */
 }
 
 /* Styliser le conteneur de la page du produit */
@@ -230,6 +232,20 @@ Style page single_product
     font-size: 18px; /* Taille de la police */
     font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
     color: purple;
+}
+
+label {
+    font-size: 18px; /* Taille de la police */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+    color: white;
+}
+
+.sku_wrapper {
+    opacity: 0; /* Opacité à 0 pour cacher le sku */
+}
+
+.flex-control-nav, .flex-control-thumbs li {
+    padding: 2vh;
 }
 
 /* =============================
@@ -557,6 +573,7 @@ Style des produits
 .woocommerce ul.products li.product a.button:hover {
     transform: scale(1.1); /* Rend le bouton légèrement plus grand */
     background-color: violet; /* Change la couleur en violet */
+    filter: drop-shadow(2px 2px 5px #7209B7); /* Effet d'ombre */
 }
 
 }
