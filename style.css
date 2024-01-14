@@ -560,3 +560,15 @@ Style des produits
 }
 
 }
+
+/* =============================
+Page.php
+==============================*/
+.content-area p {
+    width: 100%; /* Largeur à 100% du conteneur parent */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 20px; /* Padding */
+    font-size: 18px; /* Taille de la police */
+    color: white; /* Couleur du texte */
+    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
+}
